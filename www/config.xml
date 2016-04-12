@@ -53,7 +53,9 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
 
-    <gap:plugin name="cordova-custom-config" source="npm" />
+    <gap:config-file platform="android" parent="/manifest">
+        <application android:debuggable="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
+    </gap:config-file>    
     <gap:plugin name="clevertap-cordova" source="npm">
       <param name="CLEVERTAP_ACCOUNT_ID" value="69R-Z7W-W54Z" />
       <param name="CLEVERTAP_TOKEN" value="0a1-2c6" />
@@ -93,9 +95,6 @@
     <string>100</string>
     </gap:config-file>
 
-    <platform name="android">
-        <preference name="android-manifest/application/@android:name" value="com.clevertap.android.sdk.Application" />
-    </platform>
     <!--
         Define access to external domains.
 
