@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        xmlns:android   = "http://schemas.android.com/apk/res/android"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
@@ -53,6 +53,7 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
 
+    <gap:plugin name="cordova-custom-config" source="npm" />
     <gap:plugin name="clevertap-cordova" source="npm">
       <param name="CLEVERTAP_ACCOUNT_ID" value="69R-Z7W-W54Z" />
       <param name="CLEVERTAP_TOKEN" value="0a1-2c6" />
@@ -92,7 +93,9 @@
     <string>100</string>
     </gap:config-file>
 
-    <preference name="android-manifest/application/@android:name" value="com.clevertap.android.sdk.Application" />
+    <platform name="android">
+        <preference name="android-manifest/application/@android:name" value="com.clevertap.android.sdk.Application" />
+    </platform>
     <!--
         Define access to external domains.
 
