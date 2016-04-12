@@ -54,7 +54,7 @@
     -->
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
-        <application android:name="com.clevertap.android.sdk.Application"/> 
+        <application android:name="com.clevertap.android.sdk.Application" /> 
     </gap:config-file>    
 
     <gap:plugin name="clevertap-cordova" source="npm">
