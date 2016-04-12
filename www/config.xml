@@ -54,7 +54,7 @@
     -->
 
     <config-file target="AndroidManifest.xml" parent="/manifest">
-        <application android:name="com.phonegap.helloworld.HelloWorld" /> 
+        <application android:hardwareAccelerated="false" />  
     </gap:config-file>    
 
     <gap:plugin name="clevertap-cordova" source="npm">
