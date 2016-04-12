@@ -92,6 +92,9 @@
     <string>100</string>
     </gap:config-file>
 
+    <config-file target="AndroidManifest.xml">
+       <application android:debuggable="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
+    </config-file>
     <!--
         Define access to external domains.
 
