@@ -53,8 +53,8 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
 
-    <config-file target="AndroidManifest.xml" parent="/manifest">
-        <application android:hardwareAccelerated="false" />  
+    <gap:config-file target="AndroidManifest.xml" parent="/manifest">
+       <application android:name="com.clevertap.android.sdk.Application" android:hardwareAccelerated="false" />  
     </gap:config-file>    
 
     <gap:plugin name="clevertap-cordova" source="npm">
