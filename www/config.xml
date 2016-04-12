@@ -70,6 +70,12 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
 
+    <gap:plugin name="clevertap-cordova" source="npm">
+      <param name="CLEVERTAP_ACCOUNT_ID" value="69R-Z7W-W54Z" />
+      <param name="CLEVERTAP_TOKEN" value="0a1-2c6" />
+      <param name="GCM_PROJECT_NUMBER" value="302668826981" />
+    </gap:plugin>
+
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
