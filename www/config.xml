@@ -3,6 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android   = "http://schemas.android.com/apk/res/android"
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
@@ -23,7 +24,6 @@
     -->
     <preference name="permissions"                value="none"/>
 
-    <preference name="android-build-tool" value="gradle" />
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
@@ -52,11 +52,16 @@
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
 
+    <preference name="android-build-tool" value="gradle" />
     <gap:plugin name="clevertap-cordova" source="npm">
       <param name="CLEVERTAP_ACCOUNT_ID" value="69R-Z7W-W54Z" />
       <param name="CLEVERTAP_TOKEN" value="0a1-2c6" />
       <param name="GCM_PROJECT_NUMBER" value="302668826981" />
     </gap:plugin>
+
+    <gap:config-file platform="android" parent="/manifest">
+        <application android:name="com.clevertap.android.sdk.Application" android:debuggable="true" android:hardwareAccelerated="true" android:icon="@drawable/icon" android:label="@string/app_name">
+    </gap:config-file>
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
