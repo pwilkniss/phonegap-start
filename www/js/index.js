@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        CleverTap.notifyDeviceReady();
         CleverTap.setDebugLevel(1277182231);
     },
     // Update DOM on a Received Event

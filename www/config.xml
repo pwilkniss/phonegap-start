@@ -3,7 +3,6 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        xmlns:android="http://schemas.android.com/apk/res/android"
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
@@ -52,10 +51,6 @@
     <!--
         <gap:plugin name="com.phonegap.plugins.barcodescanner" />
     -->
-
-    <gap:config-file target="AndroidManifest.xml" parent="/manifest/application" mode="delete">
-       <application android:name="com.clevertap.android.sdk.Application" android:hardwareAccelerated="false" />  
-    </gap:config-file>    
 
     <gap:plugin name="clevertap-cordova" source="npm">
       <param name="CLEVERTAP_ACCOUNT_ID" value="69R-Z7W-W54Z" />
