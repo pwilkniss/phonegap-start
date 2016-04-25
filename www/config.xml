@@ -58,6 +58,10 @@
       <param name="GCM_PROJECT_NUMBER" value="302668826981" />
     </gap:plugin>
 
+    <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+      <param name="URL_SCHEME" value="ctpgbtest" />
+    </gap:plugin>
+
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
@@ -114,6 +118,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-intent href="ctpgbtest:*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>

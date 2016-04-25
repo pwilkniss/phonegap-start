@@ -36,6 +36,8 @@ var app = {
         app.receivedEvent('deviceready');
         CleverTap.notifyDeviceReady();
         CleverTap.setDebugLevel(1277182231);
+        CleverTap.recordEventWithName("testPhoneGapBuild");
+        CleverTap.recordEventWithNameAndProps("phoneGapBuildwProps", {"value":"foo"});
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,5 +49,11 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    }
+    },
+    handleOpenURL: function(url) {
+        setTimeout(function() {
+            alert("received url: " + url);
+    }, 0);
+}
+
 };
