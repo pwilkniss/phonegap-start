@@ -49,11 +49,12 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-    },
-    handleOpenURL: function(url) {
-        setTimeout(function() {
-            alert("received url: " + url);
-    }, 0);
-}
-
+    }
 };
+
+var handleOpenURL = function(url) {
+    setTimeout(function() {
+        alert("received url: " + url);
+    }, 0);
+};
+
