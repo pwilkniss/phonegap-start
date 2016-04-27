@@ -38,11 +38,12 @@ var app = {
         CleverTap.setDebugLevel(1277182231);
         CleverTap.recordEventWithName("testPhoneGapBuild");
         CleverTap.recordEventWithNameAndProps("phoneGapBuildwProps", {"value":"foo"});
+
         var push = PushNotification.init({
             ios: {
-                alert: "true",
-                badge: true,
-                sound: 'true'
+                "alert": "true",
+                "badge": "true",
+                "sound": "true"
             },
         });
         
