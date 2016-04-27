@@ -6,6 +6,8 @@
         id        = "com.clevertap.phonegapbuild"
         version   = "1.0.0">
 
+    <preference name="phonegap-version" value="cli-6.1.0" />
+
     <name>Hello World</name>
 
     <description>
