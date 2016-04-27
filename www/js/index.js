@@ -39,6 +39,7 @@ var app = {
         CleverTap.recordEventWithName("testPhoneGapBuild");
         CleverTap.recordEventWithNameAndProps("phoneGapBuildwProps", {"value":"foo"});
 
+        // push plugin usage
         var push = PushNotification.init({
             ios: {
                 "alert": "true",
