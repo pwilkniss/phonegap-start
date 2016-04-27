@@ -62,6 +62,10 @@
       <param name="URL_SCHEME" value="ctpgbtest" />
     </gap:plugin>
 
+    <gap: plugin name="phonegap-plugin-push" source="npm">
+        <param name="SENDER_ID" value="CTPGBTEST" />
+    </gap:plugin>
+
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />

@@ -36,9 +36,25 @@ var app = {
         app.receivedEvent('deviceready');
         CleverTap.notifyDeviceReady();
         CleverTap.setDebugLevel(1277182231);
-        CleverTap.registerPush();
         CleverTap.recordEventWithName("testPhoneGapBuild");
         CleverTap.recordEventWithNameAndProps("phoneGapBuildwProps", {"value":"foo"});
+        var push = PushNotification.init({
+            ios: {
+                alert: "true",
+                badge: true,
+                sound: 'true'
+            },
+        });
+        
+        push.on('notification', function(data) {
+            console.log(data.message);
+            console.log(data.title);
+            console.log(data.count);
+            console.log(data.sound);
+            console.log(data.image);
+            console.log(data.additionalData);
+        });
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
