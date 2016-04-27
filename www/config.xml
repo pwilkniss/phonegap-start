@@ -62,7 +62,7 @@
       <param name="URL_SCHEME" value="ctpgbtest" />
     </gap:plugin>
 
-    <gap: plugin name="phonegap-plugin-push" source="npm">
+    <gap:plugin name="phonegap-plugin-push" source="npm">
         <param name="SENDER_ID" value="CTPGBTEST" />
     </gap:plugin>
 
