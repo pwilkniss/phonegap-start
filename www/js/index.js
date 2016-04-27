@@ -36,6 +36,7 @@ var app = {
         app.receivedEvent('deviceready');
         CleverTap.notifyDeviceReady();
         CleverTap.setDebugLevel(1277182231);
+        CleverTap.registerPush();
         CleverTap.recordEventWithName("testPhoneGapBuild");
         CleverTap.recordEventWithNameAndProps("phoneGapBuildwProps", {"value":"foo"});
     },
