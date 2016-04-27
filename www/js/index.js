@@ -47,6 +47,10 @@ var app = {
             },
         });
         
+        push.on('registration', function(data) {
+            CleverTap.setPushToken(data.registrationId);
+        });
+
         push.on('notification', function(data) {
             console.log(data.message);
             console.log(data.title);
